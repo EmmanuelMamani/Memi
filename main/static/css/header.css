@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 10vh;
+    border-bottom: 5px solid #2F8A83;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#logo{
+    height: 9vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.option{
+    padding: 1%;
+    background-color: #28817A;
+    color: white;
+    width: 80%;
+    text-align: center;
+    display: none;
+}
+.option:hover{
+    background-color: #1d6862;
+}

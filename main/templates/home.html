@@ -1,0 +1,55 @@
+
+{% extends 'header.html' %}
+{% load static %}
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block main %}
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img\memi.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img\memi.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img\memi.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <h2 class="titulo">
+    <span class="linea"></span>
+    <span id="titulo">Cursos y eventos</span>
+    <span class="linea"></span>
+  </h2>
+  <div id="contenedor">
+    <h3>Destacados</h3>
+    <div id="eventos" class="grid grid-cols-3 gap-5 mt-3">
+        <div class="evento">
+            <img src="{% static 'img\evento.png' %}" alt="" class="img">
+            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
+        </div>
+        <div class="evento">
+            <img src="{% static 'img\evento.png' %}" alt=""  class="img">
+            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
+        </div>
+        <div class="evento">
+            <img src="{% static 'img\evento.png' %}" alt=""  class="img">
+            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
+        </div>
+    </div>
+  </div>
+{% endblock %}
