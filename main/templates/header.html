@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     {% block estilos %}
 
@@ -17,9 +18,9 @@
 <body>
     <header class="grid grid-cols-7 justify-items-center">
         <div class="flex items-center"><img src="{% static 'img\logo.jpg' %}" id="logo"></div>
-        <div class="flex items-center"><a href="#">Inicio</a></div>
-        <div class="flex items-center"><a href="#">Nosotros</a></div>
-        <div class="flex items-center"><a href="#">Cursos</a></div>
+        <div class="flex items-center"><a href="{% url 'inicio'%}">Inicio</a></div>
+        <div class="flex items-center"><a href="{% url 'nosotros'%}">Nosotros</a></div>
+        <div class="flex items-center"><a href="{% url 'cursos' %}">Cursos</a></div>
         <div class="flex items-center"><a href="#">Publicaciones</a></div>
         <div class="flex items-center"><a href="#">Contactos</a></div>
         <div class="flex items-center"><a href="#" class="transform transition-transform duration-500 active:rotate-180" id="desplegar"><span class="material-symbols-outlined text-4xl" id="icono">arrow_drop_down</span></a></div>
@@ -32,6 +33,8 @@
         {% block main %}
         {% endblock %}
     </div>
+    {% block js %}
+    {% endblock %}
 </body>
 <script>
     var desplegar=document.getElementById("desplegar")
