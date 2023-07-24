@@ -9,3 +9,6 @@ def nosotros(request):
 
 def cursos(request):
     return render(request,'cursos.html')
+
+def publicaciones(request):
+    return render(request,'publicaciones.html')

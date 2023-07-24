@@ -21,14 +21,44 @@
         <div class="flex items-center"><a href="{% url 'inicio'%}">Inicio</a></div>
         <div class="flex items-center"><a href="{% url 'nosotros'%}">Nosotros</a></div>
         <div class="flex items-center"><a href="{% url 'cursos' %}">Cursos</a></div>
-        <div class="flex items-center"><a href="#">Publicaciones</a></div>
+        <div class="flex items-center"><a href="{% url 'publicaciones' %}">Publicaciones</a></div>
         <div class="flex items-center"><a href="#">Contactos</a></div>
         <div class="flex items-center"><a href="#" class="transform transition-transform duration-500 active:rotate-180" id="desplegar"><span class="material-symbols-outlined text-4xl" id="icono">arrow_drop_down</span></a></div>
     </header>
-    <div class="grid grid-cols-7 justify-items-center">
-        <a href="#" class="col-start-7 option">Iniciar sesion</a>
-        <a href="#" class="col-start-7 option">Registrarse</a>
+    <div class="grid grid-cols-1 justify-items-center" id="opciones">
+        <a href="#" class="col-start-1 option" id="sesion_btn">Iniciar sesion</a>
+        <a href="#" class="col-start-1 option" id="registrarse_btn">Registrarse</a>
     </div>
+    <dialog id="registrarse">
+        <form action="" method="post">
+            <h3>Registrarse</h3>
+            <label>Nombre:</label>
+            <input type="text">
+            <label>Email:</label>
+            <input type="email">
+            <label>Contraseña</label>
+            <input type="password">
+            <label>Confirmar contraseña:</label>
+            <input type="password">
+            <div class="botones grid grid-cols-2">
+                <button id="confirmarR">Registrarse</button>
+                <span id="cancelarR">Cancelar</span>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="sesion">
+        <form action="" method="post">
+            <h3>Iniciar Sesion</h3>
+            <label>Email:</label>
+            <input type="email">
+            <label>Contraseña</label>
+            <input type="password">
+            <div class="botones grid grid-cols-2">
+                <button id="confirmarS">Registrarse</button>
+                <span id="cancelarS">Cancelar</span>
+            </div>
+        </form>
+    </dialog>
     <div id="main">
         {% block main %}
         {% endblock %}
@@ -54,6 +84,26 @@
             alerta=0
             icono.innerHTML='arrow_drop_down'
         }
+    }
+    var registrarse_btn= document.getElementById("registrarse_btn");
+    var registrarse= document.getElementById("registrarse");
+    registrarse_btn.onclick=function(){
+       registrarse.showModal();
+    }
+    var cancelarR=document.getElementById("cancelarR")
+    cancelarR.onclick=function(){
+        registrarse.close();
+    }
+
+    /*********************************************/
+    var sesion_btn= document.getElementById("sesion_btn");
+    var sesion= document.getElementById("sesion");
+    sesion_btn.onclick=function(){
+        sesion.showModal();
+    }
+    var cancelarS=document.getElementById("cancelarS")
+    cancelarS.onclick=function(){
+        sesion.close();
     }
 </script>
 </html>
