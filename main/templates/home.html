@@ -2,10 +2,13 @@
 {% extends 'header.html' %}
 {% load static %}
 {% block estilos %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 {% block main %}
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="contenedor">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'img\memi.jpg' %}" class="d-block w-100" alt="...">
@@ -27,29 +30,38 @@
     </button>
   </div>
 
-  <h2 class="titulo">
-    <span class="linea"></span>
-    <span id="titulo">Cursos y eventos</span>
-    <span class="linea"></span>
-  </h2>
-  <div id="contenedor">
-    <h3>Destacados</h3>
-    <div id="eventos" class="grid grid-cols-3 gap-5 mt-3">
-        <div class="evento">
-            <img src="{% static 'img\evento.png' %}" alt="" class="img">
-            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
-            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
-        </div>
-        <div class="evento">
-            <img src="{% static 'img\evento.png' %}" alt=""  class="img">
-            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
-            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
-        </div>
-        <div class="evento">
-            <img src="{% static 'img\evento.png' %}" alt=""  class="img">
-            <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
-            <p class="text-end text-slate-500 text-sm">06 de Junio</p>
-        </div>
+  <div id="contenedor1">
+    <h2 class="titulo">
+      <span class="linea"></span>
+      <span id="titulo" class="text-2xl">Cursos y eventos</span>
+      <span class="linea"></span>
+    </h2>
+    <div class="cursos">
+      <h3 class="text-lg">Destacados</h3>
+      <div id="eventos" class="grid grid-cols-3 gap-5 mt-3">
+          <div class="evento shadow-slate-700 shadow-xl">
+              <img src="{% static 'img\evento.png' %}" alt="" class="img">
+              <div class="descripcion">
+                <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+                <p class="text-end text-slate-900 text-sm">06 de Junio</p>
+              </div>
+          </div>
+          <div class="evento shadow-slate-700 shadow-xl">
+              <img src="{% static 'img\evento.png' %}" alt=""  class="img">
+              <div class="descripcion">
+                <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+                <p class="text-end text-slate-900 text-sm">06 de Junio</p>
+              </div>
+          </div>
+          <div class="evento shadow-slate-700 shadow-xl">
+              <img src="{% static 'img\evento.png' %}" alt=""  class="img">
+              <div class="descripcion">
+                <p class="px-4 text-sm">Invitamos a la charla DataMesh a cargo de la Ing. Viviana Terceros.</p>
+                <p class="text-end text-slate-900 text-sm">06 de Junio</p>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
+</div>
 {% endblock %}

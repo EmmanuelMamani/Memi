@@ -1,3 +1,11 @@
+#contenedor{
+  position: fixed; /* Fija el sidebar en su posición */
+  top: 10vh;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
 .carousel{
     margin-top: 2%;
     width: 90%;
@@ -5,33 +13,43 @@
 }
 
 .titulo {
-    margin-top: 2%;
     display: flex;
     align-items: center;
-    margin-left: 5%;
-    width: 90%;
+    width: 100%;
   }
   #titulo{
     margin-left: 5%;
     margin-right: 5%;
+    color: white;
   }
   .linea {
     flex-grow: 1;
     height: 2px;
+    background-color: #4CBBAF;
+  }
+  #contenedor1{
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 2%;
     background-color: #28817A;
   }
-  #contenedor{
-    margin-left: 5%;
-    width: 90%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
   .evento{
-    border: 2px solid rgb(216, 216, 216);
-    border-radius: 10px;
-    padding: 1%;
+    border-radius: 5px;
+    background-color: #ABCECB;
+    color: black;
   }
   .img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
     height: auto;
+  }
+  .cursos{
+    margin-top: 1%;
+    color: white;
+    margin-left: 5%;
+    width: 90%;
+  }
+  .descripcion{
+    padding: 1%;
   }

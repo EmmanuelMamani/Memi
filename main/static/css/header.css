@@ -1,11 +1,17 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
 }
 header{
     height: 10vh;
-    border-bottom: 5px solid #2F8A83;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fija el header en su posición */
+    top: 0; /* Asegura que el header esté pegado a la parte superior de la página */
+    left: 0; /* Asegura que el header esté pegado a la izquierda de la página */
+    width: 100%; /* Asegura que el header ocupe toda la anchura de la ventana */
+    z-index: 999;
 }
 #logo{
     height: 9vh;
@@ -14,14 +20,89 @@ a{
     text-decoration: none;
     color: black;
 }
+#opciones{
+  position: fixed;
+  top: 10vh;
+  width: 15%;
+  z-index: 999;
+  margin-left: 85%;
+}
 .option{
     padding: 1%;
     background-color: #28817A;
     color: white;
-    width: 80%;
+    width: 100%;
     text-align: center;
     display: none;
 }
 .option:hover{
     background-color: #1d6862;
 }
+
+/* Estilos para navegadores basados en WebKit (Chrome, Safari, etc.) */
+/* Cambiar el color del fondo del scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar vertical */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo del track del scrollbar */
+  }
+  
+  /* Cambiar el color de la barra del scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ABCECB; /* Color de la barra del scrollbar */
+    border-radius: 6px; /* Borde redondeado de la barra */
+  }
+  
+  /* Estilos para navegadores basados en Firefox */
+  /* Cambiar el ancho y color del scrollbar vertical */
+  /* Puedes omitir este bloque si solo te interesa cambiar el scrollbar en WebKit */
+  body {
+    scrollbar-width: thin; /* Ancho del scrollbar vertical */
+    scrollbar-color: #ABCECB #f1f1f1; /* Color de la barra y fondo del scrollbar */
+  }
+  
+  #registrarse, #sesion{
+    margin-top: 10%;
+    margin-left: 35%;
+    width: 30%;
+    border-radius: 20px;
+    padding: 2%;
+  }
+
+  form > label{
+    display: block;
+  }
+  form > input{
+    margin-top: 2%;
+    display: block;
+    background-color: #D3EDEB;
+    border-radius: 10px;
+    padding: 1%;
+    width: 100%;
+    padding-left: 5%;
+  }
+  form  > h3{
+    text-align: center;
+    font-weight: 800;
+  }
+  #confirmarR, #confirmarS{
+    width: 80%;
+    border-radius: 10px;
+    background-color: #28817A;
+  }
+  #cancelarR, #cancelarS{
+    width: 80%;
+    margin-left: 20%;
+    border-radius: 10px;
+    background-color: #BA3131;
+    padding: 1%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .botones{
+    margin-top: 5%;
+    color: white;
+  }

@@ -1,0 +1,116 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/cursos.css' %}">
+<!-- Agrega la dependencia de Slick Carousel CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+{% endblock %}
+
+{% block main %}
+<div id="sidebar">
+    <a href="#">IA</a>
+    <a href="#">Python</a>
+    <a href="#">Java</a>
+</div>
+<div id="contenido">
+    <div class="buscar-container">
+        <span class="material-symbols-outlined"> search</span>
+        <input type="text" class="buscar-input" placeholder="Buscar">
+    </div>
+    <!-- Agrega el nuevo carrusel con Slick Carousel -->
+    <div class="area">
+        <h2 class="text-center text-xl">IA</h2>
+        <div class="carousel1">
+            <div class="curso">
+                <img src="https://imgmedia.larepublica.pe/640x377/larepublica/original/2023/06/12/648729b547d1f62e2f5c7d04.webp" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="https://imgmedia.larepublica.pe/640x377/larepublica/original/2023/06/12/648729b547d1f62e2f5c7d04.webp" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="https://imgmedia.larepublica.pe/640x377/larepublica/original/2023/06/12/648729b547d1f62e2f5c7d04.webp" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div>Elemento 4</div>
+            <div>Elemento 5</div>
+            <div>Elemento 6</div>
+            <!-- Agrega más elementos aquí -->
+        </div>
+    </div>
+    <div class="area">
+        <h2 class="text-center text-xl">Python</h2>
+        <div class="carousel2">
+            <div class="curso">
+                <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div class="curso">
+                <img src="https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671" alt="">
+                <div class="descripcion">
+                    <p>Inteligencia artificial con google</p>
+                    <span>31 de diciembre</span>
+                </div>
+            </div>
+            <div>Elemento 4</div>
+            <div>Elemento 5</div>
+            <div>Elemento 6</div>
+            <!-- Agrega más elementos aquí -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Agrega la dependencia de Slick Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+      // Inicializa Slick Carousel
+      $('.carousel1').slick({
+        slidesToShow: 3, // Número de elementos a mostrar en cada diapositiva
+        slidesToScroll: 3, // Número de elementos a desplazarse en cada cambio de diapositiva
+        autoplay: false, // Reproducir automáticamente el carrusel
+        autoplaySpeed: 2000, // Velocidad de cambio de diapositivas en milisegundos
+        dots: true, // Muestra la paginación
+        customPaging: function(slider, i) {
+          // Usa números en lugar de puntos para la paginación
+          return (i + 1);
+        }
+      });
+      $('.carousel2').slick({
+        slidesToShow: 3, // Número de elementos a mostrar en cada diapositiva
+        slidesToScroll: 3, // Número de elementos a desplazarse en cada cambio de diapositiva
+        autoplay: false, // Reproducir automáticamente el carrusel
+        autoplaySpeed: 2000, // Velocidad de cambio de diapositivas en milisegundos
+        dots: true, // Muestra la paginación
+        customPaging: function(slider, i) {
+          // Usa números en lugar de puntos para la paginación
+          return (i + 1);
+        }
+      });
+    });
+</script>
+{% endblock %}
